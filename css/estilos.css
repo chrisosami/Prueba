@@ -1,0 +1,825 @@
+:root{
+  --color1: rgb(219,144,.5);
+  --color2: rgba(23,180,83,.0788);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenido: 45px;
+  --sombras: 0 0 6px 0 rgba(0,0,0,.5);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: open sans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+body {
+  font-family: 'open sans';
+  background: var(--fondo);
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Estilos preloader inicio*/
+.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #cef;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+/*Estilos preloader fin*/
+
+
+
+/*Estilos header inicio */
+
+header {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0, .6), 
+    rgba(29,141,171, .6),
+    rgba(7,09,50, .45)
+    ), url(../img/01-Portada.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+
+.nav1{
+  background: transparent;
+  height: 80px;
+  color: #fff;
+}
+
+.nav2{
+  background: var(--fondo);
+  height: 100px;
+  color: #000;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a{
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit; 
+}
+
+nav .enlaces a:hover{
+  border-bottom: 3px solid #1498a4;
+  transition: 0.6s;
+}
+
+.logo, .logo img{
+  height: 80px;
+}
+
+.icono{
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos>h1{
+  font-size: 80px;
+}
+
+.textos>h2{
+  font-size: 30px;
+  font-weight: 300px;
+
+}
+
+/* Estilos Header fin*/
+
+
+
+/* Estilos main */
+
+.contenedor{
+  margin: auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3{
+  font-size: var(--titulos);
+  color: var(--color1);
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300px;
+  color: var(--color1);  
+}
+
+.after::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);  
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card{
+  width: 24%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  overflow: hidden;
+  height: 400px;
+}
+
+.people{
+  height: 80%;
+}
+
+.content-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team{
+height: 20%;
+width: 100%;
+padding: var(--espacios)0;
+}
+
+.about{
+  background: url(../img/fondo.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.objetivos{
+  display: flex;
+  color: #fff;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.caja-objetivos>h4{
+  margin-bottom: var(--espacios);
+}
+
+.caja-objetivos>p{
+  text-align: center;
+}
+
+.botones-temas{
+  overflow: hidden;
+}
+
+.botones-temas li{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+}
+
+.botones-temas li:hover{
+  background: var(--color1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.botones-temas .active{
+  background: var(--color1);
+  color: #fff;
+}
+
+.galeria-temas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria-temas .cont-temas{
+width: 31%;
+box-shadow: var(--sombras);
+height: 300px;
+overflow: hidden;
+margin-bottom: var(--espacios-contenido);
+}
+
+.img-temas{
+  height: 90%;
+  width: 100%;
+}
+
+.img-temas img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-temas{
+  height: 10%;
+}
+
+.textos-temas h4{
+  line-clamp: 30px;
+  font-weight: 300px;
+}
+
+/*Estilos main fin*/
+
+/*Estilos modal inicio*/
+.flex,
+.flex2,
+.flex3,
+.flex4,
+.flex5,
+.flex6,
+.flex7,
+.flex8,
+.flex9,
+.flex10,
+.flex11,
+.flex12,
+.flex13,
+.flex14,
+.flex15,
+.flex16,
+.flex17,
+.flex18,
+.flex19,
+.flex20,
+.flex21,
+.flex22,
+.flex23{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal,
+.modal2,
+.modal3,
+.modal4,
+.modal5,
+.modal6,
+.modal7,
+.modal8,
+.modal9,
+.modal10,
+.modal11,
+.modal12,
+.modal13,
+.modal14,
+.modal15,
+.modal16,
+.modal17,
+.modal18,
+.modal19,
+.modal20,
+.modal21,
+.modal22,
+.modal23{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.contenido-modal{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  width: 70%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+  animation-name: modal;
+  animation-duration: 1s;
+}
+iframe{
+  display: block;
+  margin: 0 auto;
+}
+.img-modal{
+  height: 90%;
+  width: 100%;
+}
+
+.img-modal img{
+  height: 40%;
+  width: 40%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+
+}
+
+@keyframes modal{
+  from{top:-330px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
+
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7,
+.close8,
+.close9,
+.close10,
+.close11,
+.close12,
+.close13,
+.close14,
+.close15,
+.close16,
+.close17,
+.close18,
+.close19,
+.close20,
+.close21,
+.close22,
+.close23{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close2:hover,
+.close3:hover,
+.close4:hover,
+.close5:hover,
+.close6:hover,
+.close7:hover,
+.close8:hover,
+.close9:hover,
+.close10:hover,
+.close11:hover,
+.close12:hover,
+.close13:hover,
+.close14:hover,
+.close15:hover,
+.close16:hover,
+.close17:hover,
+.close18:hover,
+.close19:hover,
+.close20:hover,
+.close21:hover,
+.close22:hover,
+.close23:hover{
+  color: #95a5a6;
+  cursor: pointer;
+}
+
+.modal-header, .modal-footer{
+  padding: 8px 16px;
+  background: #2980b9;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+
+.modal-body p{
+  text-align: justify;
+}
+
+.modal-body{
+  padding: 20px 16px;
+}
+
+@media screen and (max-width: 900px){
+  .contenido-modal{
+    width: 70%;
+  }
+
+}
+/*Estilos modal fin*/
+
+/*Estilos modal formulario inicio*/
+.flex24{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal24{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.contenido-modal24{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  width: 80%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+  animation-name: modalA;
+  animation-duration: 1s;
+}
+
+
+@keyframes modalA{
+  from{top:-330px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
+
+.close24{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close24:hover{
+  color: #95a5a6;
+  cursor: pointer;
+}
+
+
+.modal-body p{
+  text-align: justify;
+}
+
+.modal-body24{
+  padding: 20px 16px;
+  background: #bdc3c7;
+}
+form h1{
+  text-align: center;
+}
+
+@media screen and (max-width: 900px){
+  .contenido-modal{
+    width: 70%;
+  }
+
+}
+/*Estilos modal formulario fin*/
+
+/*Estilos formulario inicio*/
+form{
+  background: #fff;
+  width: 30%;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 55, 0.8);
+  margin: auto;
+}
+
+
+form .grupo{
+  position: relative;
+  margin: 45px;
+}
+
+input, textarea{
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+  resize: none;
+}
+
+input:focus,textarea:focus{
+  outline: none;
+  color: rgb(94,93,93);
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color: #2196F3;
+}
+
+label{
+  color: var(--colorTextos);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.3s ease all;
+  pointer-events: none;
+}
+
+.barra{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+input:focus~.barra::before, textarea:focus~.barra::before{
+  width: 100%;
+}
+
+.barra::before{
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #0575E6;
+  transition: 0.3s ease all;
+  left: 0%;
+}
+
+button{
+  background: #0575E6;
+  display: block;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1100px){
+  form{
+    width: 50%;
+  }
+
+  iframe{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  form{
+    width: 60%;
+  }
+
+  iframe{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 450px){
+  form{
+    width: 80%;
+  }
+
+  iframe{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px){
+  form{
+    width: 90%;
+  }
+
+  iframe{
+    width: 90%;
+  }
+}
+/*Estilos formulario fin*/
+
+
+/*Estilos Footer inicio*/
+
+footer{
+  background: url(../img/fondo.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.marca-logo{
+  width: 80%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+
+.marca-logo img{
+  width: 100%;
+}
+
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.fab{
+font-size: 60px;
+color: #fff;
+margin-bottom: var(--espacios);
+display: inline-block;
+}
+
+footer p{
+  margin-top: var(--espacios);
+}
+
+@media screen and (max-width: 700px){
+  .nav2{
+    color: #fff;
+  }
+
+  .icono{
+    display: block;
+    cursor: pointer;
+  }
+
+  .enlaces{
+    position: fixed;
+    top: 80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color: #fff;
+  }
+
+  .textos>h1{
+    font-size: 50px;
+  }
+
+  .textos>h2{
+    font-size: 25px;
+  }
+
+  .content-card{
+    width: 48%;
+    margin-bottom: var(--margenes);
+  }
+
+  .galeria-temas .cont-temas{
+    width: 45%;
+    margin-bottom: var(--margenes);
+    box-shadow: var(--sombras);
+  }
+
+  :root{
+    --margenes: 30px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+
+  .content-card{
+    width: 90%;
+  }
+
+  .caja-objetivos{
+    width: 90%;
+    margin-bottom: var(--margenes);
+  }
+
+  .galeria-temas .cont-temas{
+    width: 90%;
+    margin-bottom: var(--margenes);
+    box-shadow: var(--sombras);
+  }
+
+  .marca-logo{
+    width: 90%;
+  }
+
+  .iconos{
+    margin: auto;
+  }
+
+}
